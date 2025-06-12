@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url(fondo_add_menu.jpg);background-size: 100%;">
+  <div class="container-admin">
+    <h1>Panel de Administración</h1>
+    <form id="menu-form">
+      <input type="text" id="menu-principal" placeholder="Plato Principal" required>
+      <input type="text" id="menu-agregado" placeholder="Agregado" required>
+      <input type="text" id="menu-vegano" placeholder="Menu Vegano" required>
+      <input type="text" id="menu-alternativo" placeholder="Menu Alternativo" required>
+      <button type="submit">Agregar al Menú</button>
+    </form>
+    <ul id="menu-list"></ul>
+    <button id="logout-button">Cerrar Sesión</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

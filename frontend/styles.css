@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+* {
+  outline: 1px solid red; /* Muestra los límites de cada elemento */
+}
+
+.container-admin {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgb(105, 105, 105, 50%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.container-login {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgb(105, 105, 105, 50%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.container-menu {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgba(255, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1{
+  text-align: center;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+#menu-list li {
+  background: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  form input {
+    flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+  }
+
+  form button {
+    width: 100%; /* Botón ocupa toda la fila */
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  form input {
+    font-size: 14px;
+  }
+
+  form button {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+input[type="text"] {
+  display: block; /* Asegura que cada input esté en una línea separada */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  box-sizing: border-box; /* Incluye padding y bordes dentro del ancho */
+  margin-bottom: 10px; /* Espaciado entre inputs */
+}
+/* Corregir problemas de escalado en dispositivos móviles */
+body, input, button {
+  -webkit-tap-highlight-color: transparent; /* Elimina resaltes al tocar */
+  touch-action: manipulation; /* Mejora interacción táctil */
+}
+
+/* Asegurar compatibilidad con pantallas pequeñas */
+@media (max-width: 480px) {
+  input[type="text"] {
+    font-size: 16px; /* Ajusta el tamaño de la fuente para dispositivos pequeños */
+    height: auto; /* Permite que el tamaño del input se ajuste correctamente */
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
