@@ -3,11 +3,13 @@ body {
   margin: 0;
   padding: 0;
 }
-* {
-  outline: 1px solid red; /* Muestra los límites de cada elemento */
+/* {
+  outline: 1px solid rgb(255, 0, 0, 200%);
 }
-
+*/
 .container-admin {
+  position: relative;
+  top:40px;
   max-width: 600px;
   margin: 50px auto;
   background-color: rgb(105, 105, 105, 50%);
@@ -33,7 +35,12 @@ body {
 }
 h1{
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
+  background-color:rgba(0, 0, 0, 0.8);
+  margin-left:px ;
+  
+  padding: 20px;
+
 }
 
 form {
@@ -46,12 +53,23 @@ input, button {
   padding: 10px;
   font-size: 16px;
 }
-
+#logout-button{
+  color:black;
+  background-color: #ff4f4f;
+  cursor: pointer;
+  position: absolute;
+  top:-75px;
+  left:520px;
+}
+#logout-button:hover{
+  color: white;
+  background-color: #5a0000;
+}
 button {
   background: #007BFF;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -67,7 +85,6 @@ button:hover {
 #menu-list li {
   background: #f9f9f9;
   margin: 5px 0;
-  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -83,6 +100,7 @@ button:hover {
 
   form button {
     width: 100%; /* Botón ocupa toda la fila */
+
   }
 }
 
@@ -97,8 +115,15 @@ button:hover {
 
   form button {
     font-size: 14px;
+    
   }
-
+  #logout-button{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 8px;
+    left: 220px;
+    border-radius: 10px;
+  }
   li {
     font-size: 14px;
   }
