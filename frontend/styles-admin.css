@@ -9,40 +9,52 @@ body {
 */
 .container-admin {
   position: relative;
-  top:40px;
-  max-width: 600px;
+  top:15px;
+  max-width: 300px;
   margin: 50px auto;
-  background-color: rgb(105, 105, 105, 50%);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.container-login {
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: rgb(105, 105, 105, 50%);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.container-menu {
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: rgba(255, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+
 h1{
   text-align: center;
+  position:relative;
   color: rgb(255, 255, 255);
-  background-color:rgba(0, 0, 0, 0.8);
-  margin-left:px ;
-  
+  background-color:rgba(4, 3, 3, 0.8);
+  border-radius: 10px;
+  bottom:35px;  
   padding: 20px;
-
+  margin-left: -20px;
+  margin-right: -20px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
-
+#menu-principal{
+  border-radius: 14px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+#menu-agregado{
+  border-radius: 14px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+#menu-vegano{
+  border-radius: 14px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+#menu-alternativo{
+  border-radius: 14px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -53,29 +65,63 @@ input, button {
   padding: 10px;
   font-size: 16px;
 }
-#logout-button{
+#cancel{
   color:black;
   background-color: #ff4f4f;
   cursor: pointer;
   position: absolute;
-  top:-75px;
-  left:520px;
+  border-radius: 10px;
+  top:-50px;
+  left:500px;
 }
-#logout-button:hover{
+#cancel:hover{
   color: white;
   background-color: #5a0000;
 }
 button {
-  background: #007BFF;
+  position: relative;
+  overflow: hidden; /* Necesario para la barra de carga */
+  background-color:rgb(13, 108, 163);
+  font-size: large;
+}
+button:hover{
+  background-color:rgb(10, 68, 102);
   color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+}
+#add-menu{
+  font-size: large;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+button .loading-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #00e676;
+  z-index: 0;
+  transition: width 1s linear;
 }
 
-button:hover {
-  background: #0056b3;
+button.loading .loading-bar {
+  animation: buttonLoading 1.5s forwards;
 }
+
+@keyframes buttonLoading {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+    transition: width 0.5s ease-in;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
 
 #menu-list {
   list-style: none;
@@ -117,11 +163,11 @@ button:hover {
     font-size: 14px;
     
   }
-  #logout-button{
+  #cancel{
     position: absolute;
     box-sizing: border-box;
     padding: 8px;
-    left: 220px;
+    left: 240px;
     border-radius: 10px;
   }
   li {
