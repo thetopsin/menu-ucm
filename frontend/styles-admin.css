@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  size-adjust: 100px;
 }
 /* {
   outline: 1px solid rgb(255, 0, 0, 200%);
@@ -9,13 +10,15 @@ body {
 */
 .container-admin {
   position: relative;
-  top:15px;
-  max-width: 300px;
+  top:150px;
+  max-height: 900px;
+  max-width: 600px;
   margin: 50px auto;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.5);
 }
 
 h1{
@@ -24,7 +27,7 @@ h1{
   color: rgb(255, 255, 255);
   background-color:rgba(4, 3, 3, 0.8);
   border-radius: 10px;
-  bottom:35px;  
+  bottom:41px;  
   padding: 20px;
   margin-left: -20px;
   margin-right: -20px;
@@ -61,37 +64,47 @@ form {
   gap: 10px;
 }
 
-input, button {
+input{
   padding: 10px;
   font-size: 16px;
+  position: relative;
+  top:-20px;
 }
+input:hover{
+  border-color: red;
+  padding: 15px;
+  
+}
+  
 #cancel{
   color:black;
   background-color: #ff4f4f;
   cursor: pointer;
   position: absolute;
   border-radius: 10px;
-  top:-50px;
-  left:500px;
+  top:-30px;
+  left:800px;
 }
 #cancel:hover{
   color: white;
   background-color: #5a0000;
 }
 button {
+  padding: 13px;
   position: relative;
   overflow: hidden; /* Necesario para la barra de carga */
   background-color:rgb(13, 108, 163);
-  font-size: large;
 }
 button:hover{
   background-color:rgb(10, 68, 102);
   color: white;
 }
 #add-menu{
+  top:20px;
   font-size: large;
   font-weight: bold;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
 }
 button .loading-bar {
   position: absolute;

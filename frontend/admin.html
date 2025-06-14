@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu </title>
+    <link rel="stylesheet" href="styles-main.css">
+</head>
+<body>
+  <div class = "container">
+    <h1>pico pal que lee</h1>
+    <button id="submit">mish</button>
+
+
+  </div>
+<script>
+  const sector = 'Casino'; // Cambiar manualmente según el sector
+  document.title = `Menu ${sector}`;
+  document.getElementById('page-title').innerText = `Menu ${sector}`;
+  document.getElementById('submit').addEventListener("click", () => {
+    alert("mish");
+  });
+</script>
+</body>
+</html>
