@@ -1,0 +1,9 @@
+body{
+    padding: 5px;
+    display: flex;
+    background-color: green;
+}
+
+.container{
+    background-color: red;
+}

@@ -1,0 +1,212 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  size-adjust: 100px;
+}
+/* {
+  outline: 1px solid rgb(255, 0, 0, 200%);
+}
+*/
+.container-admin {
+  position: relative;
+  top:150px;
+  max-height: 900px;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.5);
+}
+
+h1{
+  text-align: center;
+  position:relative;
+  color: rgb(255, 255, 255);
+  background-color:rgba(4, 3, 3, 0.8);
+  border-radius: 10px;
+  bottom:41px;  
+  padding: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+#menu-principal{
+  border-radius: 14px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+#menu-agregado{
+  border-radius: 14px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+#menu-vegano{
+  border-radius: 14px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+#menu-alternativo{
+  border-radius: 14px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input{
+  padding: 10px;
+  font-size: 16px;
+  position: relative;
+  top:-20px;
+}
+input:hover{
+  border-color: red;
+  padding: 15px;
+  
+}
+  
+#cancel{
+  color:black;
+  background-color: #ff4f4f;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 10px;
+  top:-30px;
+  left:800px;
+}
+#cancel:hover{
+  color: white;
+  background-color: #5a0000;
+}
+button {
+  padding: 13px;
+  position: relative;
+  overflow: hidden; /* Necesario para la barra de carga */
+  background-color:rgb(13, 108, 163);
+}
+button:hover{
+  background-color:rgb(10, 68, 102);
+  color: white;
+}
+#add-menu{
+  top:20px;
+  font-size: large;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+}
+button .loading-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #00e676;
+  z-index: 0;
+  transition: width 1s linear;
+}
+
+button.loading .loading-bar {
+  animation: buttonLoading 1.5s forwards;
+}
+
+@keyframes buttonLoading {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+    transition: width 0.5s ease-in;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+#menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+#menu-list li {
+  background: #f9f9f9;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  form input {
+    flex: 1 1 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+  }
+
+  form button {
+    width: 100%; /* Botón ocupa toda la fila */
+
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  form input {
+    font-size: 14px;
+  }
+
+  form button {
+    font-size: 14px;
+    
+  }
+  #cancel{
+    position: absolute;
+    box-sizing: border-box;
+    padding: 8px;
+    left: 240px;
+    border-radius: 10px;
+  }
+  li {
+    font-size: 14px;
+  }
+}
+input[type="text"] {
+  display: block; /* Asegura que cada input esté en una línea separada */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  box-sizing: border-box; /* Incluye padding y bordes dentro del ancho */
+  margin-bottom: 10px; /* Espaciado entre inputs */
+}
+/* Corregir problemas de escalado en dispositivos móviles */
+body, input, button {
+  -webkit-tap-highlight-color: transparent; /* Elimina resaltes al tocar */
+  touch-action: manipulation; /* Mejora interacción táctil */
+}
+
+/* Asegurar compatibilidad con pantallas pequeñas */
+@media (max-width: 480px) {
+  input[type="text"] {
+    font-size: 16px; /* Ajusta el tamaño de la fuente para dispositivos pequeños */
+    height: auto; /* Permite que el tamaño del input se ajuste correctamente */
+  }
+
+  button {
+    font-size: 16px;
+  }
+}

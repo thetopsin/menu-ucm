@@ -1,0 +1,47 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #74ebd5, #9face6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+/* Botones */
+.sector-button {
+  display: block;
+  width: 80%; /* Ocupa el 80% del ancho de la pantalla */
+  max-width: 400px; /* Limita el ancho máximo en pantallas grandes */
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  background-color: #007BFF;
+  padding: 40px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  
+}
+
+.sector-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.sector-button:active {
+  background-color: #003f7f;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 480px) {
+  .sector-button {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+}
