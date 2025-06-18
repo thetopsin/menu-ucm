@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Cafeteria Entrada</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafeteria Entrada</title>
+  <link rel="stylesheet" href="styles/styles-cafeteria-entrada.css">
 </head>
 <body>
-    <h1>Esta es la Cafeteria de la Entrada</h1>
-    
+  <header>
+    <nav>
+      <a href="#comida" class="menu-button">Comida</a>
+      <a href="#liquidos" class="menu-button">Liquidos</a>
+    </nav>
+  </header>
+  <main> >
+    <section id="comida">
+      <h2>Comida</h2>
+      <p>Aquí encontrarás productos solidos disponibles en la cafetería de la entrada.</p>
+      <div class="menu-grid" id="comida-container"></div>
+    </section>
+    <section id="liquidos">
+      <h2>Liquidos</h2>
+      <p>Aquí encontrarás bebidas y líquidos disponibles en la cafetería de la entrada.</p>
+      <div class="menu-grid" id="liquidos-container"></div>
+    </section>
+
+  </main>
+  <script src="scripts/cafen.js"></script>
 </body>
 </html>

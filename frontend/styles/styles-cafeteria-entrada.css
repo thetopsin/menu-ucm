@@ -1,0 +1,129 @@
+/* Reseteo básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  overflow-x: hidden; /* Evita desplazamiento lateral */
+}
+
+body {
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en Chrome, Edge, Safari */
+}
+
+/* Encabezado fijo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #007BFF;
+  padding: 15px 0; /* Ajuste de padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Ajuste del espaciado entre botones */
+  flex-wrap: wrap; /* Permite que los botones se ajusten en dispositivos pequeños */
+}
+
+.menu-button {
+  text-decoration: none;
+  color: white;
+  font-size: 20px; /* Ajuste para pantallas pequeñas */
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.menu-button.active {
+  font-weight: bold;
+  color: yellow;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* Ajuste de posición para secciones */
+section {
+  scroll-margin-top: 70px; /* Ajusta el espacio de la sección respecto al encabezado */
+  padding: 20px;
+  margin: 20px 0;
+  min-height: 100vh; /* Simula secciones largas */
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+}
+
+/* Estilos principales */
+main {
+  padding-top: 70px; /* Espacio para evitar que el contenido se solape con el header */
+}
+
+/* Compatibilidad para pantallas pequeñas */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0;
+  }
+
+  .menu-button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  nav {
+    gap: 10px; /* Ajusta el espacio entre los botones */
+  }
+
+  section {
+    padding: 15px;
+  }
+}
+
+/* Compatibilidad para pantallas medianas y grandes */
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 0;
+  }
+
+  .menu-button {
+    font-size: 24px; /* Mayor tamaño para pantallas grandes */
+    padding: 12px 20px;
+  }
+}
